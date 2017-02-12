@@ -1,0 +1,92 @@
+body{font-family: Avenir, Helvetica, sans-serif;}
+
+ul{list-style-type:none}
+
+#title, #index{
+  font-size: 50px;
+  font-weight: 800;
+  margin: 200px 0px 200px 0px;
+  height: 100%;
+  text-align: center;
+}
+
+.projectodd, .projecteven{
+  font-size: 75px;
+  font-weight: 800;
+  margin: 200px 0px 200px 0px;
+}
+
+.promptodd, .prompteven{
+  font-size: 15px;
+  font-weight: 300;
+  margin: 200px 0px 200px 0px;
+  font-family: Georgia, serif;
+}
+
+.explainodd, .explaineven{
+  font-size: 35px;
+  font-weight: 600;
+  
+}
+
+.unify {
+  font-size: 50px;
+  font-weight: 800;
+  margin: 0px;
+  font: bold;
+  height: 100%;
+  text-align: left;
+}
+
+.content{padding:10%;}
+
+.fixedposition {
+  position: fixed;
+  text-align: center;
+  font-size: 13px;
+  line-height:20px;
+  font-weight: 800;
+  padding:1px 2px;
+}
+
+  #home{left: 3.5%; top: 3.5%;}
+
+  #section{right: 3.5%; top: 3.5%;}
+
+  #next{right: 3.5%; bottom: 3.5%;}
+  #previous{left: 3.5%; bottom: 3.5%;}
+
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.icons{
+  float:left;
+  padding: 0.54%;
+  width: 13.2%;
+  height:13.2%;  
+}
+
+.button{
+  float:left;
+  padding: 1%;
+  width: 3.3%;
+  height:3.3%;  
+}
+
+.icons:hover, .button:hover {
+  transform:scale(1.2,1.2);
+}
+
+
+
+img.icons, img.button {
+  transition: width .5s, height .5s, transform .5s;
+    -moz-transition: width .5s, height .5s, -moz-transform .5s;
+    -webkit-transition: width .5s, height .5s, -webkit-transform .5s;
+    -o-transition: width .5s, height .5s,-o-transform .5s;
+}
