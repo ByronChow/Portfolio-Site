@@ -1,0 +1,997 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Scientific Journal</title>
+<link href='http://fonts.googleapis.com/css?family=Cabin|Playfair+Display|Asap|Merriweather|Archivo+Narrow' rel='stylesheet' type='text/css'>
+<style>
+html { 
+  background: #F1F1F1; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#heading {
+	margin-top: -10px;
+    margin-right: -10px;
+    margin-left: -10px;
+	padding-top: 40px;
+    padding-bottom: 1px;
+    padding-left: 120px;
+	background-color: #0D2435;
+	color: #FFF;
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 1.5px;
+	font-size:55px;
+}
+#index {
+    margin-right: -10px;
+    margin-left: -10px;
+	padding-top: 1px;
+    padding-bottom: 12px;
+    padding-left: 120px;
+	background-color: #D7292C;
+	color: #FFF;
+	font-size:21px;
+}
+ul#menu {
+    padding: 0;
+	font-family: 'Asap', sans-serif;
+}
+ul#menu li {
+    display: inline;
+}
+#spacer {
+	margin-top: -10px;
+    margin-right: -10px;
+    margin-left: -10px;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 120px;
+	background-color: #0D2435;
+	color: #FFF;
+	font-size:55px;
+}
+ul#menu2 {
+    padding: 0;
+	color: #777;
+}
+ul#menu2 li {
+    display: inline;
+}
+#body {
+	margin-top: 0px;
+    margin-right: 20px;
+    margin-left: 20px;
+	padding-top: 25px;
+    padding-right: 90px;
+    padding-bottom: 25px;
+    padding-left: 90px;
+	font-family: 'Asap', sans-serif;
+	background-color: #FFF;
+}
+#abstract {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-top: 25px;
+    padding-right: 45px;
+    padding-bottom: 25px;
+    padding-left: 45px;
+	line-height: 1.8em;
+	background-color: #F1F1F1;
+}
+#researchhead {
+	color: #F00;
+	font-size:25px;
+}
+.subhead {
+	font-family: 'Asap', sans-serif;
+	font-size:21px;
+}
+#articletitle {
+	font-size:55px;
+}
+#author {
+	font-size:13px;
+	font-family: 'Asap', sans-serif;
+}
+#date {
+	font-size:13px;
+	font-family: 'Asap', sans-serif;
+	margin-bottom: 30px;
+}
+#maincontent {
+	margin-right: 20px;
+    margin-left: 20px;
+	padding-top: 5px;
+    padding-right: 130px;
+    padding-bottom: 50px;
+    padding-left: 130px;
+	background-color: #FFF;
+}
+#mainsource {
+	margin-right: 20px;
+    margin-left: 20px;
+	padding-top: 5px;
+    padding-right: 130px;
+    padding-bottom: 50px;
+    padding-left: 130px;
+	background-color: #FFF;
+	font-family: 'Asap', sans-serif;
+	font-size:21px;
+}
+.content {
+	margin-right: 20px;
+    margin-left: 20px;
+	padding-top: 5px;
+    padding-right: 130px;
+    padding-bottom: 50px;
+    padding-left: 130px;
+	background-color: #FFF;
+	font-family: 'Asap', sans-serif;
+	font-size:1em;
+	line-height:1.4em;
+}
+.content2 {
+	margin-right: 20px;
+    margin-left: 20px;
+	padding-top: 5px;
+    padding-right: 130px;
+    padding-bottom: 50px;
+    padding-left: 130px;
+	background-color: #FFF;
+	font-family: 'Asap', sans-serif;
+	font-size:.7em;
+	line-height:1em;
+}
+
+.grey a:link {
+    color: #666;
+	text-decoration: none;
+}
+.grey a:visited {
+    color: #666;
+	text-decoration: none;
+}
+.grey a:hover {
+    color: #999;
+	text-decoration: none;
+}
+.grey a:active {
+    color: #0D2435;
+	text-decoration: none;
+}
+
+.white a:link {
+    color: #FFF;
+	text-decoration: none;
+}
+.white a:visited {
+    color: #FFF;
+	text-decoration: none;
+}
+.white a:hover {
+    color: #FFF;
+	text-decoration: none;
+}
+.white a:active {
+    color: #FFF;
+	text-decoration: none;
+}
+#reflection {
+	margin-right: 20px;
+    margin-left: 20px;
+	padding-top: 50px;
+    padding-right: 130px;
+    padding-bottom: 50px;
+    padding-left: 130px;
+	background-color: #0D2435;
+	line-height: 1.8em;
+	font-family: 'Asap', sans-serif;
+	color: #FFF;
+}
+#footer {
+    margin-right: 20px;
+    margin-left: 20px;
+	padding-top: 25px;
+    padding-right: 130px;
+    padding-bottom: 25px;
+    padding-left: 130px;
+	background-color: #D7292C;
+	font-family: 'Asap', sans-serif;
+	color: #FFF;
+}
+.demo{
+position:absolute;
+top:100px;
+color:black;
+left:10%;
+width:80%;
+z-index:10000;
+font-size:2em;
+line-height:1.2em;
+
+}
+header{
+font-size:2em;
+color:orange;
+line-height:2em;
+}
+
+sup{
+color:blue;
+font-size:.5em;
+font-weight:bold;
+
+}
+.fixed{
+position:fixed;
+top:10%;
+left:10%;
+width:10vw;
+height:10vw;
+
+
+}
+
+</style>
+</head>
+<body>
+<div id= "heading">
+<p>Science Journal Daily</p>
+</div>
+
+<div id= "index">
+<ul id= "menu">
+  <li class="white"><a href="y_journal.html">New Article &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a></li>
+  <li class="white"><a href ="z_content/ss_chance/z_archive.html">Archive &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+</div>
+
+<div id= "spacer"></div>
+
+<div id= "body">
+<p id= "researchhead">RESEARCH PROJECT</p>
+<p id = "articletitle">CHANCE PROJECT: Using Generative Systems to Create Legible Nonsense</p>
+<p id= "author"> <i>Written by Oscar Henry Roberts and Byron Chow</i></p>
+<p id="date"><i></i></p>
+
+<script>
+var d = new Date();
+d.setFullYear(2015, 3, 21);
+document.getElementById("date").innerHTML = d;
+</script>
+
+<hr>
+<ul id= "menu2">
+  <li class="grey"><a href="#maincontent">Content &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li class="grey"><a href="#mainsource">Source &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+  <li class="grey"><a href="#reflection">Reflection &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+</ul>
+<hr>
+<div id= "abstract">
+<p class= "subhead">Abstract</p>
+<p>Inspired by the "How to Make a Dadaist Poem" rules created by Dada poet Tristan Tzara, we built and refined an automated program that would randomly generate text by pulling together source material from Wikipedia articles. Beginning by pulling a random line from a random article, the program will continuously refresh through Wikipedia pages until it finds a conjunction (ie. or, is, and, but, was, has, so). The sentence will continue from that point until the next conjuction. This process will repeat until 40 iterations have been completed, in which case a subheader will be placed, and a new section will begin.</p>
+
+<button type="button"  onclick="startFetch(100, 500)" id="button">Generate Code</button>
+</div>
+
+</div>
+<div id= "maincontent" >
+<p class= "subhead">Content</p>
+</div>
+
+
+<div class= "content" id="cont">
+<p></p>
+</div>
+
+<div id= "mainsource">
+<hr>
+<p class= "source">Source</p>
+</div>
+
+
+<div class= "content2" id="foots">
+<p></p>
+</div>
+
+<div id= "reflection">
+<p class= "subhead">Reflection<p>
+<p>This program presented itself with a series of problems which are inherent in generative design such as text looping and bot information. While creating restrictions in order to resolve some of the kinks within the program, we began thinking of new features that could exist and make sense to include on this platform. Integrated into the final draft of code are hyperlinks leading back to each lines source, as well as subheads to break up the blocks of text. </p>
+</div>
+
+<div id= "footer">
+  <p>New Article</p>
+  <p>Archive</p>
+  <p>About</p>
+</div>
+
+  <div id="demo" class="demo"></div>
+    
+
+  <script type="text/javascript">
+	var last;
+	var ninja=1;
+	var words = [];
+	var fuck;
+	var numb = 0;
+	var resrc = [];
+	var numb2 = 0;
+    var textbox = document.getElementById("textbox");
+    var button = document.getElementById("button");
+    var tempscript = null, minchars, maxchars, attempts;
+
+    function startFetch(minimumCharacters, maximumCharacters, isRetry) {
+      if (tempscript) return; // a fetch is already in progress
+      if (!isRetry) {
+        attempts = 0;
+        minchars = minimumCharacters; // save params in case retry needed
+        maxchars = maximumCharacters;
+        button.disabled = true;
+        button.style.cursor = "wait";
+      }
+      tempscript = document.createElement("script");
+      tempscript.type = "text/javascript";
+      tempscript.id = "tempscript";
+      tempscript.src = "http://en.wikipedia.org/w/api.php"
+        + "?action=query&generator=random&prop=extracts"
+        + "&exchars="+maxchars+"&format=json&callback=onFetchComplete&requestid="
+        + Math.floor(Math.random()*999999).toString();
+        
+        fuck = tempscript.src;
+      document.body.appendChild(tempscript);
+      // onFetchComplete invoked when finished
+    }
+
+    function onFetchComplete(data,fuck) {
+      document.body.removeChild(tempscript);
+      tempscript = null
+      
+     // console.log(ninja);
+      
+      
+      var s = getFirstProp(data.query.pages).extract;
+      s = htmlDecode(stripTags(s));
+      if (s.length > minchars || attempts++ > 5) {
+        
+        button.disabled = false;
+        button.style.cursor = "auto";
+        var res = s.split(" ");
+        
+     for(var j = 0;j<res.length;j++){
+     if(res[j]=='ClueBot'){
+     // console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='Wikipedia'){
+     // console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='wikipedia'){
+     // console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='user'){
+     // console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='User'){
+     // console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='Hi'){
+     // console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='edit'){
+     // console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='I'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='vandalize'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='Vandalize'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='Hello'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='Wikipedia.'){
+//      	console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='bot'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='automated'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='link'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='yo'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='Licensing'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='YO'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='account'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='Articles'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='block'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     if(res[j]=='WikiProject'){
+     	// console.log("skipped "+res[j]);
+     	if(ninja==1){
+     	ninja=100;
+     	}
+     	if(ninja==3){
+     	ninja=5;
+     	}
+     }
+     
+     
+     }
+     
+     // console.log(ninja);
+     if(ninja == 1){
+     check1(res);
+     
+     }
+     
+     if(ninja == 3){
+     check2(res);
+     
+     }
+      
+      
+      if(ninja<90){
+      ninja=3;
+      }
+      if(ninja=5){
+      ninja = 3;
+      
+      }
+      if(ninja>90){
+      ninja=1;
+      }
+      
+      
+      
+   
+        
+       
+        
+    startFetch(100,500,true);
+      } else {
+        startFetch(0, 0, true); // retry
+      }
+    }
+function check1(res){
+      	
+       	for(var i=0;i<res.length;i++){
+       	
+       	
+       	if(res[i].slice(-1)=='.'){
+       	res[i] = res[i].substring(0,res[i].length -1)
+       	}
+       	if(res[i].slice(-1)=='.'){
+       	res[i] = res[i].substring(0,res[i].length -1)
+       	}
+       	if(res[i].slice(-1)=='.'){
+       	res[i] = res[i].substring(0,res[i].length -1)
+       	}
+       	words.push(res[i]);
+       	if(res[i]=='and'){
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);
+       	resrc.push('<sup>'+numb2+'</sup>'+fuck);
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='or'){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='but'){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;
+       	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='so'){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='is'){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='was'){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	
+       	}
+       	if(res[i]=='has'){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	
+       	}
+       	}
+       	
+       	update();
+       	
+      }
+function check2(res){
+	   var butthole = 0;
+       for(var i=0;i<res.length;i++){
+       
+       	if(res[i] == last){
+       	butthole=1;
+       	}
+       	if(butthole=1){
+       	// console.log(res[i]);
+       	if(res[i].slice(-1)=='.'){
+       	res[i] = res[i].substring(0,res[i].length -1)
+       	}
+       	if(res[i].slice(-1)=='.'){
+       	res[i] = res[i].substring(0,res[i].length -1)
+       	}
+       	if(res[i].slice(-1)=='.'){
+       	res[i] = res[i].substring(0,res[i].length -1)
+       	}
+       	words.push(res[i]);
+       	butthole++;
+       	if(res[i]=='and'&&butthole>1){
+       	words[-1]=res[i];
+       	numb++;numb2++;
+       	
+       	last = res[i];
+       	
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='or'&&butthole>1){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='but'&&butthole>1){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	}
+       	if(res[i]=='so'&&butthole>1){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	numb++;numb2++;
+       	console.log(words[-1]);
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	
+       	}
+       	if(res[i]=='is'&&butthole>1){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	
+       	numb++;numb2++;
+       	
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	
+       	}
+       	if(res[i]=='was'&&butthole>1){
+       	words.pop();
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);resrc.push(numb+' <a>'+fuck+'</a>');
+       	
+       	numb++;numb2++;
+       	
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	
+       	}
+       	
+       	if(res[i]=='has'&&butthole>1){
+       	words.pop();
+       	
+       	if(numb<40){
+       	res[i] = res[i]+'<sup> ('+numb2+') </sup>';
+       	}
+       	if(numb==40){
+       	
+       	res[i]='<header> '+res[i];
+       	
+       	}
+       	if(numb>40){
+       	
+       	res[i]=res[i]+'</header>';
+       	numb=0;	
+       	}
+       	words.push(res[i]);
+       	resrc.push(numb2+' <a>'+fuck+'</a>');
+       	
+       	numb++;numb2++;
+       	
+       	last = res[i];
+       	ninja=0;
+       	break;
+       	
+       	}
+       	
+       	}
+       	
+       	}
+       	
+       
+      }
+      function update(){
+	var stringy;
+	var stringy2;
+	for(var i=0;i<words.length;i++){
+	var c=stringy+' '+words[i];
+	stringy=c;
+	
+	
+	}
+	for(var i=0;i<resrc.length;i++){
+	var c=stringy2+'<br>'+resrc[i];
+	stringy2=c;
+	
+	
+	}
+	
+	// 
+	document.getElementById("cont").innerHTML = stringy;
+	document.getElementById("foots").innerHTML = stringy2;
+	console.log(resrc);
+	
+	setTimeout(function(){update();},1000);
+	}
+    function getFirstProp(obj) {
+      for (var i in obj) return obj[i];
+    }
+    function stripTags(s) {
+      return s.replace(/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, "");
+    }
+    function htmlDecode(input){
+      var e = document.createElement("div");
+      e.innerHTML = input;
+      return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+    }
+
+  </script>
+
+
+
+
+
+</body>
+</html>
