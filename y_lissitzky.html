@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lissitzky</title>
+    <link rel="stylesheet" href="z_content/ss_liss/jquery-ui-1.11.1/jquery-ui.css"/>
+    <script type="text/javascript" src="z_content/ss_liss/jquery-ui-1.11.1/jquery.js"></script>
+    <script type="text/javascript" src="z_content/ss_liss/jquery-ui-1.11.1/jquery-ui.js"></script>
+
+
+
+<script type="text/javascript">
+$("document").ready(function() {
+    var project4img = ["z_content/ss_liss/lizz05.png","z_content/ss_liss/lizz07.png","z_content/ss_liss/lizz06.png"];
+    var project5img = ["z_content/ss_liss/lizz01.png","z_content/ss_liss/lizz02.png","z_content/ss_liss/lizz03.png","z_content/ss_liss/lizz07.png","z_content/ss_liss/lizz06.png"];
+    var project6img = ["z_content/ss_liss/lizz04.png","z_content/ss_liss/lizz08.png","z_content/ss_liss/lizz09.png",];
+    var project7img = ["z_content/ss_liss/lizz10.png","z_content/ss_liss/lizz11.png","z_content/ss_liss/lizz12.png",];
+    var project8img = ["z_content/ss_liss/lizz13.png","z_content/ss_liss/lizz14.png","z_content/ss_liss/lizz15.png",];
+    var project9img = ["z_content/ss_liss/lizz16.png","z_content/ss_liss/lizz17.png","z_content/ss_liss/lizz18.png",];
+    var project10img = ["z_content/ss_liss/lizz19.png","z_content/ss_liss/lizz20.png","z_content/ss_liss/lizz21.png",];
+    var pro4Img = project4img[Math.floor(Math.random()*project4img.length)];
+    var pro5Img = project5img[Math.floor(Math.random()*project5img.length)];
+    var pro6Img = project6img[Math.floor(Math.random()*project6img.length)];
+    var pro7Img = project7img[Math.floor(Math.random()*project6img.length)];
+    var pro8Img = project8img[Math.floor(Math.random()*project6img.length)];
+    var pro9Img = project9img[Math.floor(Math.random()*project6img.length)];
+    var pro10Img = project10img[Math.floor(Math.random()*project6img.length)];
+    $("#project4").append(
+      $("<img src='"+ pro4Img + "' />)")
+    );
+    $("#project5").append(
+      $("<img src='"+ pro5Img + "' />)")
+    );
+    $("#project6").append(
+      $("<img src='"+ pro6Img + "' />)")
+    );
+    $("#project7").append(
+      $("<img src='"+ pro7Img + "' />)")
+    );
+    $("#project8").append(
+      $("<img src='"+ pro8Img + "' />)")
+    );
+    $("#project9").append(
+      $("<img src='"+ pro9Img + "' />)")
+    );
+    $("#project10").append(
+      $("<img src='"+ pro10Img + "' />)")
+    );
+    $('#project4, #project5, #project6, #project7, #project8, #project9, #project10').draggable();
+
+    $('#project4, #project5, #project6, #project7, #project8, #project9, #project10').each(function(i,el){
+      var tLeft = Math.floor(Math.random()*900),
+          tTop  = Math.floor(Math.random()*600);
+        $(el).css({position:'absolute', left: tLeft, top: tTop});
+      });
+});
+
+</script>
+
+
+<script type="text/javascript">
+
+   var num;
+   var temp=0;
+   var preloads=[];
+
+/* add any number of images here */
+
+preload(
+        'z_content/ss_liss/background1.jpg',
+        'z_content/ss_liss/background2.jpg',
+        'z_content/ss_liss/background3.jpg',
+        'z_content/ss_liss/background4.jpg',
+        'z_content/ss_liss/background5.jpg',
+        'z_content/ss_liss/background6.jpg',
+        'z_content/ss_liss/background7.jpg',
+        'z_content/ss_liss/background8.jpg',
+        'z_content/ss_liss/background8.jpg',
+        'z_content/ss_liss/background9.jpg',
+        'z_content/ss_liss/background10.jpg',
+        'z_content/ss_liss/background11.jpg',
+       );
+
+function preload(){
+
+for(var c=0;c<arguments.length;c++) {
+   preloads[preloads.length]=new Image();
+   preloads[preloads.length-1].src=arguments[c];
+  }
+ }
+
+function rotateImages() {
+   num=Math.floor(Math.random()*preloads.length);
+if(num==temp){
+   rotateImages();
+ }
+else {
+   document.body.style.backgroundImage='url('+preloads[num].src+')';
+   temp=num;
+
+setTimeout(function(){rotateImages()},speed);
+  }
+ }
+
+if(window.addEventListener){
+   window.addEventListener('load',rotateImages,false);
+ }
+else { 
+if(window.attachEvent){
+   window.attachEvent('onload',rotateImages);
+  }
+ }
+</script>
+
+
+<style>
+	/* PROJECTS */
+
+img{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+ img:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility opacity 0.5s;
+}
+
+.imgWrap:hover .description {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+	#project1{
+	}
+
+	#project2{
+	}
+
+	#project3{
+
+	}
+
+	#project4{
+
+
+	}
+
+	#project5{
+
+	}
+
+	#project6{
+
+	}
+
+
+</style>
+</head>
+<body>
+
+
+
+<!-- PROJECT ICONS-->
+
+<div class="imgWrap">
+    <div id="project4">
+    </div>
+</div>
+
+<div class="imgWrap">
+    <div id="project5">
+    </div>
+</div>
+
+<div class="imgWrap">
+    <div id="project6">
+    </div>
+</div>
+
+<div class="imgWrap">
+    <div id="project7">
+    </div>
+</div>
+
+<div class="imgWrap">
+    <div id="project8">
+    </div>
+</div>
+
+<div class="imgWrap">
+    <div id="project9">
+    </div>
+</div>
+
+<div class="imgWrap">
+    <div id="project10">
+    </div>
+</div>
+
+
+
+</div>
+</body>
+
+<script type="text/javascript"> 
+ChangeIt();
+</script> 
+</html>
